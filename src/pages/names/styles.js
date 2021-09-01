@@ -18,7 +18,7 @@ const NamesStyles = makeStyles((theme) => ({
   gridItem: {
     margin: "50px auto",
     [theme.breakpoints.down("sm")]: {
-      margin: "0",
+      margin: "0 auto 0 0",
     },
   },
 }));

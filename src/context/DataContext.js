@@ -9,6 +9,7 @@ function DataContextProvider({ children }) {
   const [viewType, setViewType] = useState("list");
   const [range, setRange] = useState(5);
   const [favorites, setFavorites] = useState([]);
+  const [filter, setFilter] = useState("");
 
   useEffect(() => {
     fetchNames();
@@ -19,15 +20,13 @@ function DataContextProvider({ children }) {
   function editFavorite(title, action) {
     const itemIndex = favorites.findIndex((value) => value === title);
     if (action === "create" && itemIndex === -1) {
-      const newFavorites = [...favorites, title];
-      localStorage.setItem("favorites", JSON.stringify(newFavorites));
-      setFavorites(newFavorites);
-    } else {
-      console.log(title, action, itemIndex);
-      localStorage.setItem(
-        "favorites",
-        JSON.stringify(favorites.splice(itemIndex, 1))
-      );
+      const newFavoritesAdd = [...favorites, title];
+      localStorage.setItem("favorites", JSON.stringify(newFavoritesAdd));
+      setFavorites(newFavoritesAdd);
+    } else if (action === "remove") {
+      const newFavoritesDel = favorites.filter((item) => item !== title);
+      localStorage.setItem("favorites", JSON.stringify(newFavoritesDel));
+      setFavorites(newFavoritesDel);
     }
   }
 
@@ -51,9 +50,11 @@ function DataContextProvider({ children }) {
         viewType,
         range,
         favorites,
+        filter,
         setRange,
         setViewType,
         editFavorite,
+        setFilter,
       }}
     >
       {children}

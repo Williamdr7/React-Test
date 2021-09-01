@@ -7,13 +7,19 @@ const ListsStyles = makeStyles((theme) => ({
     width: "78%",
     [theme.breakpoints.down("sm")]: {
       width: "100%",
-      margin: ({ viewType }) => viewType && "0",
+      margin: ({ viewType }) => viewType && "auto",
     },
   },
   paginate: {
     margin: "40px auto",
     display: "flex",
     textAlign: "center",
+  },
+  gridItem: {
+    margin: "0 auto",
+    [theme.breakpoints.down("sm")]: {
+      margin: "0 auto 0 0",
+    },
   },
 }));
 

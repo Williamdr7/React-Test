@@ -18,7 +18,7 @@ export default function NameCard({ name }) {
         >
           <div className={classes.titleContainer}>
             <div>
-              <Link underline="aways" href={`#&name=${name.list_name}`}>
+              <Link underline="aways" href={`/lists#&name=${name.list_name}`}>
                 {name.list_name}
               </Link>
             </div>
@@ -27,7 +27,7 @@ export default function NameCard({ name }) {
               variant="inherit"
               color="textSecondary"
             >
-              Atualizada em 00/00/00
+              Atualizada em {name.newest_published_date}
             </Typography>
           </div>
         </Grid>

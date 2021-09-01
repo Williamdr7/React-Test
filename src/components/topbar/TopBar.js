@@ -18,9 +18,6 @@ export default function TopBar({ title }) {
     context.setViewType(value);
   }
 
-  const handleRangeChange = (event) => {
-    context.setRange(event.target.value);
-  };
   return (
     <AppBar className={classes.appBarContainer} position="static">
       <Toolbar className={classes.barContainer}>
@@ -37,7 +34,6 @@ export default function TopBar({ title }) {
               labelId="range-label"
               id="range-select"
               value={context.range}
-              onChange={handleRangeChange}
             >
               <MenuItem value={5}>5</MenuItem>
               <MenuItem value={10}>10</MenuItem>

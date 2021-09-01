@@ -26,8 +26,9 @@ const TopStyles = makeStyles((theme) => ({
   title: {
     fontSize: "24px",
     fontWeight: "600",
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.down("sm")]: {
       display: "block",
+      fontSize: "18px",
     },
   },
   select: {

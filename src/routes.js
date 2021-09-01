@@ -9,11 +9,11 @@ export default function Routes() {
     <Router>
       <Header />
       <Switch>
-        <Route exact path="/names">
-          <Names />
-        </Route>
-        <Route path="/lists">
+        <Route exact path="/lists">
           <Lists />
+        </Route>
+        <Route exact path="/">
+          <Names />
         </Route>
       </Switch>
     </Router>

@@ -16,8 +16,9 @@ const HeaderStyles = makeStyles((theme) => ({
   title: {
     fontSize: "32px",
     fontWeight: "600",
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.down("sm")]: {
       display: "block",
+      fontSize: "24px",
     },
   },
   search: {
@@ -26,6 +27,7 @@ const HeaderStyles = makeStyles((theme) => ({
     backgroundColor: "#ffffff",
     marginRight: theme.spacing(2),
     width: "388px",
+    color: "#9296AC",
     [theme.breakpoints.down("sm")]: {
       width: "100%",
       marginTop: "8px",
@@ -66,9 +68,13 @@ const HeaderStyles = makeStyles((theme) => ({
     },
   },
   starIconMobile: {
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.up("md")]: {
       display: "none",
     },
+  },
+  starIcon: {
+    width: "24px",
+    height: "23px",
   },
   titleContainer: {
     display: "flex",
