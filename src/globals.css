@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/*Sobrescrevendo estilos do Material Ui ( O recomendado componentizar esse trecho) */
+.MuiPagination-ul {
+  margin: auto !important;
+}
+
+.MuiPaginationItem-outlined {
+  border: 1px solid #1f2445 !important;
+  box-sizing: border-box !important;
+  border-radius: 12px !important;
+}
+.Mui-selected {
+  background-color: #1f2445 !important;
+  color: #fff !important;
+}
